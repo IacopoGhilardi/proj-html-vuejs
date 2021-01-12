@@ -8,3 +8,14 @@
         }
     }
 }
+
+
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+@mixin flexItem($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

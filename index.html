@@ -11,33 +11,34 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body> 
+
+    <div id="root">
     
     <!-- header -->
     <header>
 
         <!-- navbar -->
         <nav class="header-top">
-            <div class="logo"><img src="images/logotype.png" alt="logo"></div>
+            <div class="logo"><a href="#"><img src="images/logotype.png" alt="logo"></a></div>
 
             <div class="nav-bar">
                 <ul>
-                    <li><a  class="active" href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li v-for="(nav, index) in navbar" @click="toggleActiveClass(index)"><a :class="nav.class" href="#">{{nav.name}}</a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- jumbotron -->
         <div id="jumbotron">
-
+            <h1>THE BEST BUSINESS CONSULTING</h1>
         </div>
 
     </header>
     <!-- /header -->
+
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>

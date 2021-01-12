@@ -1,10 +1,14 @@
 header {
-  height: 650px;
-  background-color: pink;
+  height: 1000px;
   display: flex;
-  flex-direction: column;
+  justify-content: initial;
   align-items: center;
+  flex-direction: column;
   background-color: #1F1E38;
+  background-image: url(/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg?f22be5ed6888295e1bb9d4501bcf5320);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 66% auto;
 }
 
 .header-top {
@@ -16,6 +20,7 @@ header {
 
 .logo {
   display: flex;
+  justify-content: initial;
   align-items: center;
 }
 .logo img {
@@ -37,16 +42,20 @@ header {
   width: auto;
   display: flex;
   justify-content: flex-end;
+  align-items: initial;
 }
 .nav-bar ul li {
   position: relative;
   height: 100%;
   padding: 0 20px;
   display: flex;
+  justify-content: initial;
   align-items: flex-end;
 }
 .nav-bar ul li a {
-  color: #AAAAAA;
+  color: #ffffffb0;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 .nav-bar ul li a:hover {
   color: white;
@@ -61,6 +70,10 @@ header {
   width: calc(100% - 40px);
   height: 3px;
   background-color: white;
+}
+
+#jumbotron {
+  color: white;
 }
 
 * {
