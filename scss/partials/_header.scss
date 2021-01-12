@@ -3,7 +3,7 @@ header {
     @include flexItem(initial, center);
     flex-direction: column;
     background-color: $primaryDarkBlue;
-    background-image: url("../../images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg");
+    background-image: url("../../img/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg");
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 66% auto;
@@ -116,3 +116,9 @@ header {
     }
 }
 
+
+@media screen and (max-width: 1650px) {
+    header {
+        background-size: 66% 100%;
+    }
+  }
