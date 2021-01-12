@@ -19,3 +19,12 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin greenLine {
+    content: "";
+            display: inline-block;
+            width: 55px;
+            height: 3px;
+            background-color: $greenBackground;
+            margin-right: 20px;
+}
