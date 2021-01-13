@@ -2,23 +2,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .div_80 {
-        background-color: pink;
-        display: flex;
+    .consulting_title {
         width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        h3 {
+            font-size: 1.7rem;
+            @include uppercase;
+        }
+        margin: 60px 0;
+    }
+    .div_80 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
         .div_50 {
             display: flex;
-            width: 50%;
-            padding: 20px;
+            padding: 30px 30px 30px 0;
+            &:first-child {
+                margin-right: 200px;
+            }
             div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                height: 100%;
+                padding: 10px 20px 20px 0;
+                h4 {
+                    font-size: 1.3rem;
+                    @include uppercase;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .description {
+                max-width: 400px;
+                margin-left: 50px;
+            }
+            .consulting_img {
                 background-color: $primaryRed;
-                border-radius: 50%;
-                height: 64px;
                 width: 64px;
-                margin-right: 30px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                padding: 0;
             }
         }
     }
