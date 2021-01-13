@@ -143,20 +143,37 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  padding: 50px 0;
 }
 .consulting .consulting_title {
-  width: 80%;
   display: flex;
+  min-width: calc(544px*2);
   justify-content: flex-start;
   margin: 60px 0;
 }
 .consulting .consulting_title h3 {
   font-size: 1.7rem;
   text-transform: uppercase;
+  position: relative;
+  color: #1F1E38;
+}
+.consulting .consulting_title h3::after {
+  content: "";
+  display: inline-block;
+  width: 55px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 30px);
+  transform: translateY(-50%);
+  width: 2000px;
 }
 .consulting .div_80 {
-  width: 80%;
   display: flex;
+  padding-left: 200px;
   justify-content: center;
 }
 .consulting .div_80 .div_50 {
@@ -169,6 +186,7 @@ header {
 .consulting .div_80 .div_50 div {
   height: 100%;
   padding: 10px 20px 20px 0;
+  color: #1F1E38;
 }
 .consulting .div_80 .div_50 div h4 {
   font-size: 1.3rem;
@@ -191,6 +209,57 @@ header {
   justify-content: center;
   border-radius: 50%;
   padding: 0;
+}
+
+.main-darkblue-back {
+  background-color: #1F1E38;
+}
+.main-darkblue-back .about {
+  color: white;
+  background-image: url("../img/business-people-working-together-on-project-and-5FHSKBL.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 56% auto;
+  padding: 60px 0;
+}
+.main-darkblue-back .about .about_description {
+  margin-left: 56%;
+  padding: 100px 50px;
+  width: 600px;
+}
+.main-darkblue-back .about .about_description h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.main-darkblue-back .about .about_description h6::before {
+  content: "";
+  display: inline-block;
+  width: 55px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+}
+.main-darkblue-back .about .about_description h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main-darkblue-back .about .about_description p {
+  color: #AAAAAA;
+}
+.main-darkblue-back .green_banner {
+  position: relative;
+  background-color: #39FFBF;
+  width: 80%;
+  display: flex;
+  padding: 70px;
+}
+.main-darkblue-back .green_banner h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 * {
