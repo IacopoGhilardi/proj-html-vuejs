@@ -263,6 +263,7 @@ header {
   max-width: 500px;
   padding: 50px;
   text-align: center;
+  color: #1F1E38;
 }
 .main-darkblue-back .green_banner div h3 {
   font-size: 1.5rem;
@@ -281,6 +282,11 @@ header {
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+.main-darkblue-back .green_banner button:hover {
+  background-color: #1F1E38;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 * {
