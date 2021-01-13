@@ -253,12 +253,33 @@ header {
 .main-darkblue-back .green_banner {
   position: relative;
   background-color: #39FFBF;
-  width: 80%;
+  width: calc(56% + 550px);
   display: flex;
-  padding: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 200px;
 }
-.main-darkblue-back .green_banner h3 {
-  font-size: 2rem;
+.main-darkblue-back .green_banner div {
+  max-width: 500px;
+  padding: 50px;
+  text-align: center;
+}
+.main-darkblue-back .green_banner div h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-right: 100px;
+}
+.main-darkblue-back .green_banner button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #F81D39;
+  padding: 20px 50px;
+  outline: none;
+  border: none;
+  font-size: 0.7rem;
+  color: white;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 

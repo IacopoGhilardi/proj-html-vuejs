@@ -102,12 +102,34 @@
     .green_banner {
         position: relative;
         background-color: $greenBackground;
-        width: 80%;
+        width: calc(56% + 550px);
         display: flex;
-        padding: 70px;
-        h3 {
-            font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 200px;
+        div {
+            max-width: 500px;
+            padding: 50px;
+            text-align: center;
+            h3 {
+                font-size: 1.5rem;
+                @include uppercase;
+                margin-right: 100px;
+            }
+        }
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $primaryRed;
+            padding: 20px 50px;
+            outline: none;
+            border: none;
+            font-size: .7rem;
+            color: white;
+            letter-spacing: 2px;
             @include uppercase;
         }
+        
     }
 }
