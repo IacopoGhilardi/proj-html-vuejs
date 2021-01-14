@@ -80,13 +80,13 @@
         padding: 60px 0;
         .about_description {
             margin-left: 56%;
-            padding: 100px 50px;
-            width: 600px;
+            padding: 200px 100px;
+            width: 700px;
             h6 {
                 @include sectionTitle;
             }
             h2 {
-                font-size: 3rem;
+                font-size: 3.7rem;
                 @include uppercase;
                 margin-bottom: 30px
             }
@@ -98,11 +98,11 @@
     .green_banner {
         position: relative;
         background-color: $greenBackground;
-        width: calc(56% + 550px);
+        width: calc(#{$maxWidth} + ((100% - #{$maxWidth}) / 2));
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px 200px;
+        padding: 50px 200px;
         div {
             max-width: 500px;
             padding: 50px;
@@ -119,13 +119,7 @@
             bottom: 0;
             right: 0;
             background-color: $primaryRed;
-            padding: 20px 50px;
-            outline: none;
-            border: none;
-            font-size: .7rem;
-            color: white;
-            letter-spacing: 2px;
-            @include uppercase;
+            @include defaultBtn;
             &:hover {
                 background-color: $primaryDarkBlue;
                 cursor: pointer;
@@ -143,18 +137,18 @@
         .projects {
             flex-direction: column;
             width: $generalWidth;
-            max-width: 1600px;
+            max-width: #{$maxWidth};
             position: relative;
             .projects_title {
                 margin-bottom: 50px;
-                max-width: 600px;
+                max-width: 900px;
                 @include uppercase;
                 color: white;
                 h6 {
                     @include sectionTitle;
                 }
                 h2 {
-                    font-size: 2rem;
+                    @include sectionH2;
                 }
                 .arrows {
                     position: absolute;
@@ -263,20 +257,22 @@
                 align-self: flex-end;
                 @include sectionH2;
                 margin-bottom: 50px;
-                max-width: 550px;
+                max-width: 600px;
                 text-align: end;
             }
         }
         .white_banner {
-            width: calc(1600px + ((100% - 1600px) / 2));
+            width: calc(#{$maxWidth} + ((100% - #{$maxWidth}) / 2));
             align-self: flex-end;
             background-color: white;
             display: flex;
             .banner_section {
-                width: calc(1600px / 3);
+                width: calc(#{$maxWidth} / 3);
                 position: relative;
                 padding: 70px 80px 60px;
                 transition: background .3;
+                background-position: center;
+                background-size: cover;
                 p {
                     margin-bottom: 30px;
                     color: $grayText;
@@ -290,24 +286,18 @@
                 }
                 &:first-child:hover {
                     background-image: url("../img/oliver-ragfelt-488196-2.jpg");
-                    background-position: center;
-                    background-size: cover;
                     h6 {
                         color: white;
                     }
                 }
                 &:nth-child(2):hover {
                     background-image: url("../img/12679.jpg");
-                    background-position: center;
-                    background-size: cover;
                     h6 {
                         color: white;
                     }
                 }
                 &:nth-child(3):hover {
                     background-image: url("../img/oliver-ragfelt-488196-unsplash.jpg");
-                    background-position: center;
-                    background-size: cover;
                     h6 {
                         color: white;
                     }
@@ -339,12 +329,8 @@
                 right: 0;
                 transform: translateY(-50%);
                 background-color: $greenBackground;
-                padding: 20px 50px;
-                outline: none;
-                border: none;
-                font-size: .7rem;
-                letter-spacing: 2px;
-                @include uppercase;
+                @include defaultBtn;
+                color: $primaryDarkBlue;
                 &:hover {
                     background-color: $primaryRed;
                     cursor: pointer;
@@ -395,6 +381,11 @@
                         font-size: 1.1rem;
                     }
                 }
+                &:hover figcaption {
+                    background-color: $greenBackground;
+                    transform: translateY(35%);
+                    transition: .4s ease-out;
+                }
             }
         }
         
@@ -403,13 +394,39 @@
     .get_started {
         margin-top: 300px;
         width: 100%;
-        padding: 100px;
+        padding: 140px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-image: url("../../img/business-people-working-together-on-project-and-B3MZ4TX.jpg");
         background-position: center;
         background-size: cover;
+        h2 {
+            @include sectionH2;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #ffffffcc;
+            font-size: 1.2rem;
+            max-width: 450px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 20px 50px;
+            outline: none;
+            border: none;
+            font-size: .7rem;
+            letter-spacing: 2px;
+            @include uppercase; 
+            background-color: $primaryDarkBlue;
+            color: white;
+            &:hover {
+                background-color: $greenBackground;
+                transition: .3s;
+                cursor: pointer;
+            }
+        }
     }
     
 }

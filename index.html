@@ -17,7 +17,16 @@
 <body> 
 
     <div id="root">
-    
+    <!-- chat -->
+    <section class="chat">
+        <div>
+            <a href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+        </div>
+        <div>
+            <i class="far fa-comment"></i>
+        </div>
+    </section>
+
     <!-- header -->
     <header>
 
@@ -224,15 +233,47 @@
 
             <div class="get_started">
 
-                <h3>let's talk about work</h3>
-                <p>a wonderful serenity has taken possession Far far away, behind the word mountains</p>
-                <button>getr started</button>
+                <h2>let's talk about work</h2>
+                <p>A wonderful serenity has taken possession Far far away, behind the word mountains</p>
+                <button>get started</button>
             </div>
         </section>
 
     </main>
     <!-- /main -->
 
+    <!-- footer -->
+    <footer>
+        <section class="footer_links">
+            <div class="footer_logo">
+                <img src="img/logotype-2-139x23.png" alt="logo">
+            </div>
+            <div class="footer_navbar">
+                <ul>
+                    <li v-for="(nav, index) in navbar"><a :class="nav.class" href="#">{{nav.name}}</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="copyright">
+            <div class="terms">
+                <span>Terms of use</span>
+                <span>Privacy Environmental Policy</span>
+            </div>
+            <div class="copyright_logo">
+                <span>Copyright &copy; 2021 Phlox Consulting. All Rights Reserved.</span> 
+            </div>
+        </section>
+    </footer>
+    <!-- /footer -->
     </div>
 
 

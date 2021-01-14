@@ -224,8 +224,8 @@ header {
 }
 .main-darkblue-back .about .about_description {
   margin-left: 56%;
-  padding: 100px 50px;
-  width: 600px;
+  padding: 200px 100px;
+  width: 700px;
 }
 .main-darkblue-back .about .about_description h6 {
   font-size: 0.9rem;
@@ -244,7 +244,7 @@ header {
   margin-right: 20px;
 }
 .main-darkblue-back .about .about_description h2 {
-  font-size: 3rem;
+  font-size: 3.7rem;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -254,11 +254,11 @@ header {
 .main-darkblue-back .green_banner {
   position: relative;
   background-color: #39FFBF;
-  width: calc(56% + 550px);
+  width: calc(1600px + ((100% - 1600px) / 2));
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 200px;
+  padding: 50px 200px;
 }
 .main-darkblue-back .green_banner div {
   max-width: 500px;
@@ -276,10 +276,10 @@ header {
   bottom: 0;
   right: 0;
   background-color: #F81D39;
-  padding: 20px 50px;
+  padding: 25px 55px;
   outline: none;
   border: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -305,7 +305,7 @@ header {
 }
 .main-darkblue-back .projects_container .projects .projects_title {
   margin-bottom: 50px;
-  max-width: 600px;
+  max-width: 900px;
   text-transform: uppercase;
   color: white;
 }
@@ -326,7 +326,9 @@ header {
   margin-right: 20px;
 }
 .main-darkblue-back .projects_container .projects .projects_title h2 {
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  color: white;
 }
 .main-darkblue-back .projects_container .projects .projects_title .arrows {
   position: absolute;
@@ -450,10 +452,10 @@ header {
 .main-darkblue-back .testimonial .testimonial_title h2 {
   align-self: flex-end;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   color: white;
   margin-bottom: 50px;
-  max-width: 550px;
+  max-width: 600px;
   text-align: end;
 }
 .main-darkblue-back .testimonial .white_banner {
@@ -467,6 +469,8 @@ header {
   position: relative;
   padding: 70px 80px 60px;
   transition: background 0.3;
+  background-position: center;
+  background-size: cover;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section p {
   margin-bottom: 30px;
@@ -481,24 +485,18 @@ header {
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:first-child:hover {
   background-image: url("../img/oliver-ragfelt-488196-2.jpg");
-  background-position: center;
-  background-size: cover;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:first-child:hover h6 {
   color: white;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:nth-child(2):hover {
   background-image: url("../img/12679.jpg");
-  background-position: center;
-  background-size: cover;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:nth-child(2):hover h6 {
   color: white;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:nth-child(3):hover {
   background-image: url("../img/oliver-ragfelt-488196-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section:nth-child(3):hover h6 {
   color: white;
@@ -533,7 +531,7 @@ header {
 }
 .main-darkblue-back .blog .blog_title h2 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   color: white;
   margin-bottom: 50px;
 }
@@ -543,12 +541,14 @@ header {
   right: 0;
   transform: translateY(-50%);
   background-color: #39FFBF;
-  padding: 20px 50px;
+  padding: 25px 55px;
   outline: none;
   border: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #1F1E38;
 }
 .main-darkblue-back .blog .blog_title button:hover {
   background-color: #F81D39;
@@ -600,16 +600,166 @@ header {
   margin-top: 30px;
   font-size: 1.1rem;
 }
+.main-darkblue-back .blog .blog_squares figure:hover figcaption {
+  background-color: #39FFBF;
+  transform: translateY(35%);
+  transition: 0.4s ease-out;
+}
 .main-darkblue-back .get_started {
   margin-top: 300px;
   width: 100%;
-  padding: 100px;
+  padding: 140px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url("../../img/business-people-working-together-on-project-and-B3MZ4TX.jpg");
   background-position: center;
   background-size: cover;
+}
+.main-darkblue-back .get_started h2 {
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  color: white;
+  margin-bottom: 20px;
+}
+.main-darkblue-back .get_started p {
+  color: #ffffffcc;
+  font-size: 1.2rem;
+  max-width: 450px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.main-darkblue-back .get_started button {
+  padding: 20px 50px;
+  outline: none;
+  border: none;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #1F1E38;
+  color: white;
+}
+.main-darkblue-back .get_started button:hover {
+  background-color: #39FFBF;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+footer {
+  padding-top: 60px;
+  background-color: #1F1E38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer section {
+  width: 1600px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 70px;
+}
+footer section:first-child {
+  border-bottom: 1px solid #ffffff26;
+}
+footer section:first-child div {
+  width: calc(100% / 3);
+}
+footer section:first-child .footer_navbar ul {
+  list-style: none;
+}
+footer section:first-child .footer_navbar ul li a {
+  text-decoration: none;
+}
+footer section:first-child .footer_navbar ul {
+  display: flex;
+  justify-content: center;
+}
+footer section:first-child .footer_navbar ul li {
+  padding: 15px;
+}
+footer section:first-child .footer_navbar ul li a {
+  color: #888888;
+}
+footer section:first-child .footer_navbar ul li a:hover {
+  color: #F81D39;
+  cursor: pointer;
+  transition: 0.5s;
+}
+footer section:first-child .social ul {
+  list-style: none;
+}
+footer section:first-child .social ul li a {
+  text-decoration: none;
+}
+footer section:first-child .social ul {
+  display: flex;
+  justify-content: flex-end;
+}
+footer section:first-child .social ul li {
+  padding: 10px;
+}
+footer section:first-child .social ul li a {
+  color: white;
+}
+footer section:first-child .social ul li a:hover {
+  color: #F81D39;
+  cursor: pointer;
+}
+footer section:last-child {
+  padding-top: 35px;
+  color: #888888;
+}
+footer section:last-child div {
+  width: calc(100% / 2);
+}
+footer section:last-child .terms {
+  display: flex;
+  flex-direction: column;
+}
+footer section:last-child .copyright_logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 35px;
+  right: 35px;
+  z-index: 3;
+}
+.chat div {
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat div a {
+  padding: 10px 15px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: white;
+  border: 1px solid #1F1E38;
+  outline: none;
+}
+.chat div a:hover {
+  cursor: pointer;
+}
+.chat div a i {
+  color: black;
+}
+.chat div:nth-child(2) i {
+  color: white;
+  background-color: #527CEB;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  transform: scaleX(-1);
+}
+.chat div:nth-child(2):hover {
+  cursor: pointer;
 }
 
 * {
