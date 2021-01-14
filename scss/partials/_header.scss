@@ -12,7 +12,7 @@ header {
 //header-top
 .header-top {
     display: flex;
-    width: $headerWidth;
+    width: $generalWidth;
     height: 50px;
     max-width: 1600px;
     .logo {
@@ -65,7 +65,7 @@ header {
 //jumbotron
 #jumbotron {
     font-family: 'Bai Jamjuree', sans-serif;
-    width: $headerWidth;
+    width: $generalWidth;
     max-width: 1600px;
     height: 100%;
     color: white;

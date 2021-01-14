@@ -13,7 +13,7 @@ header {
 
 .header-top {
   display: flex;
-  width: 90%;
+  width: 80%;
   height: 50px;
   max-width: 1600px;
 }
@@ -76,7 +76,7 @@ header {
 
 #jumbotron {
   font-family: "Bai Jamjuree", sans-serif;
-  width: 90%;
+  width: 80%;
   max-width: 1600px;
   height: 100%;
   color: white;
@@ -233,6 +233,7 @@ header {
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  color: white;
 }
 .main-darkblue-back .about .about_description h6::before {
   content: "";
@@ -298,7 +299,7 @@ header {
 }
 .main-darkblue-back .projects_container .projects {
   flex-direction: column;
-  width: 90%;
+  width: 80%;
   max-width: 1600px;
   position: relative;
 }
@@ -314,6 +315,7 @@ header {
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  color: white;
 }
 .main-darkblue-back .projects_container .projects .projects_title h6::before {
   content: "";
@@ -342,20 +344,272 @@ header {
   color: white;
   font-size: 0.8rem;
 }
+.main-darkblue-back .projects_container .projects .projects_title .arrows button:hover {
+  background-color: #39FFBF;
+  transition: 0.4s;
+}
 .main-darkblue-back .projects_container .projects .projects_presentation {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: unset;
+  overflow: hidden;
 }
-.main-darkblue-back .projects_container .projects .projects_presentation div {
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img {
   width: calc(100% / 3);
   height: 350px;
   padding: 10px;
+  position: relative;
+  overflow: hidden;
 }
-.main-darkblue-back .projects_container .projects .projects_presentation div img {
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img img {
   width: 100%;
   max-height: 100%;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background-color: rgba(220, 30, 58, 0.8);
+  opacity: 0;
+  padding: 20px;
+  flex-basis: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img .overlay div p {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img .overlay div span {
+  color: #888888;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img .overlay button {
+  padding: 15px 20px;
+  background-color: #1F1E38;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img:hover .overlay {
+  opacity: 1;
+}
+.main-darkblue-back .testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.main-darkblue-back .testimonial .testimonial_title {
+  width: 80%;
+  max-width: 1600px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.main-darkblue-back .testimonial .testimonial_title h6 {
+  align-self: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: white;
+}
+.main-darkblue-back .testimonial .testimonial_title h6::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+}
+.main-darkblue-back .testimonial .testimonial_title h6::before {
+  display: none;
+}
+.main-darkblue-back .testimonial .testimonial_title h6::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+.main-darkblue-back .testimonial .testimonial_title h2 {
+  align-self: flex-end;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 50px;
+  max-width: 550px;
+  text-align: end;
+}
+.main-darkblue-back .testimonial .white_banner {
+  width: calc(1600px + ((100% - 1600px) / 2));
+  align-self: flex-end;
+  background-color: white;
+  display: flex;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section {
+  width: calc(1600px / 3);
+  position: relative;
+  padding: 70px 80px 60px;
+  transition: background 0.3;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section p {
+  margin-bottom: 30px;
+  color: #888888;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section h6 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section span {
+  color: #888888;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:first-child:hover {
+  background-image: url("../img/oliver-ragfelt-488196-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:first-child:hover h6 {
+  color: white;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:nth-child(2):hover {
+  background-image: url("../img/12679.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:nth-child(2):hover h6 {
+  color: white;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:nth-child(3):hover {
+  background-image: url("../img/oliver-ragfelt-488196-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main-darkblue-back .testimonial .white_banner .banner_section:nth-child(3):hover h6 {
+  color: white;
+}
+.main-darkblue-back .blog {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-darkblue-back .blog div {
+  width: 1600px;
+}
+.main-darkblue-back .blog .blog_title {
+  position: relative;
+}
+.main-darkblue-back .blog .blog_title h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: white;
+}
+.main-darkblue-back .blog .blog_title h6::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+}
+.main-darkblue-back .blog .blog_title h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 50px;
+}
+.main-darkblue-back .blog .blog_title button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #39FFBF;
+  padding: 20px 50px;
+  outline: none;
+  border: none;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.main-darkblue-back .blog .blog_title button:hover {
+  background-color: #F81D39;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-darkblue-back .blog .blog_squares {
+  display: flex;
+}
+.main-darkblue-back .blog .blog_squares figure {
+  position: relative;
+  width: calc(100% / 2);
+  padding: 15px;
+}
+.main-darkblue-back .blog .blog_squares figure img {
+  width: 100%;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption {
+  position: absolute;
+  width: calc(100% / 4 * 3);
+  height: 50%;
+  background: white;
+  bottom: 0;
+  right: 15px;
+  transform: translateY(30%);
+  z-index: 1;
+  padding: 0 80px;
+  padding-top: 40px;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption span {
+  color: red;
+  margin-bottom: 15px;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption span {
+  font-size: 1.1rem;
+  color: red;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption span:first-child {
+  margin-right: 30px;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption h4 {
+  font-size: 2rem;
+  line-height: 35px;
+  margin-top: 20px;
+  letter-spacing: 0px;
+}
+.main-darkblue-back .blog .blog_squares figure figcaption p {
+  color: #888888;
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+.main-darkblue-back .get_started {
+  margin-top: 300px;
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../img/business-people-working-together-on-project-and-B3MZ4TX.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 * {
