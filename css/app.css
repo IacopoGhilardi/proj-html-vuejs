@@ -92,7 +92,7 @@ header {
 #jumbotron p::before {
   content: "";
   display: inline-block;
-  width: 55px;
+  width: 50px;
   height: 3px;
   background-color: #39FFBF;
   margin-right: 20px;
@@ -161,7 +161,7 @@ header {
 .consulting .consulting_title h3::after {
   content: "";
   display: inline-block;
-  width: 55px;
+  width: 50px;
   height: 3px;
   background-color: #39FFBF;
   margin-right: 20px;
@@ -228,7 +228,7 @@ header {
   width: 600px;
 }
 .main-darkblue-back .about .about_description h6 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
@@ -237,7 +237,7 @@ header {
 .main-darkblue-back .about .about_description h6::before {
   content: "";
   display: inline-block;
-  width: 55px;
+  width: 50px;
   height: 3px;
   background-color: #39FFBF;
   margin-right: 20px;
@@ -287,6 +287,75 @@ header {
   background-color: #1F1E38;
   cursor: pointer;
   transition: 0.3s;
+}
+.main-darkblue-back .projects_container {
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+}
+.main-darkblue-back .projects_container .projects {
+  flex-direction: column;
+  width: 90%;
+  max-width: 1600px;
+  position: relative;
+}
+.main-darkblue-back .projects_container .projects .projects_title {
+  margin-bottom: 50px;
+  max-width: 600px;
+  text-transform: uppercase;
+  color: white;
+}
+.main-darkblue-back .projects_container .projects .projects_title h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.main-darkblue-back .projects_container .projects .projects_title h6::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #39FFBF;
+  margin-right: 20px;
+}
+.main-darkblue-back .projects_container .projects .projects_title h2 {
+  font-size: 2rem;
+}
+.main-darkblue-back .projects_container .projects .projects_title .arrows {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+}
+.main-darkblue-back .projects_container .projects .projects_title .arrows button {
+  padding: 15px;
+  background-color: #ffffff1a;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.main-darkblue-back .projects_container .projects .projects_title .arrows button i {
+  color: white;
+  font-size: 0.8rem;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation div {
+  width: calc(100% / 3);
+  height: 350px;
+  padding: 10px;
+}
+.main-darkblue-back .projects_container .projects .projects_presentation div img {
+  width: 100%;
+  max-height: 100%;
 }
 
 * {
