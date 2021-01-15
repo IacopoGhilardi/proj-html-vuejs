@@ -110,14 +110,23 @@ header {
   display: flex;
 }
 #jumbotron .buttons .green-btn {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #39FFBF;
-  padding: 25px 60px;
+  padding: 25px 55px;
   outline: none;
   border: none;
-  font-size: 14px;
+  font-size: 0.8rem;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1F1E38;
+  background-color: #39FFBF;
   margin-right: 40px;
+  position: relative;
+}
+#jumbotron .buttons .green-btn:hover {
+  background-color: #F81D39;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
 }
 #jumbotron .buttons #play-btn {
   align-self: flex-end;
@@ -141,16 +150,18 @@ header {
 }
 .consulting {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   overflow: hidden;
   padding: 50px 0;
 }
 .consulting .consulting_title {
   display: flex;
-  min-width: calc(544px*2);
+  min-width: calc(544px * 2);
   justify-content: flex-start;
   margin: 60px 0;
+  padding-left: 200px;
 }
 .consulting .consulting_title h3 {
   font-size: 1.7rem;
@@ -173,8 +184,9 @@ header {
 }
 .consulting .div_80 {
   display: flex;
-  padding-left: 200px;
   justify-content: center;
+  align-items: unset;
+  padding-left: 200px;
 }
 .consulting .div_80 .div_50 {
   display: flex;
@@ -194,7 +206,7 @@ header {
   margin-bottom: 20px;
 }
 .consulting .div_80 .div_50 div p {
-  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 .consulting .div_80 .div_50 .description {
   max-width: 400px;
@@ -213,6 +225,16 @@ header {
 
 .main-darkblue-back {
   background-color: #1F1E38;
+  position: relative;
+}
+.main-darkblue-back .background-square {
+  width: 1000px;
+  height: 500px;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 .main-darkblue-back .about {
   color: white;
@@ -250,8 +272,11 @@ header {
 }
 .main-darkblue-back .about .about_description p {
   color: #AAAAAA;
+  font-family: "Montserrat", sans-serif;
+  line-height: 25px;
 }
 .main-darkblue-back .green_banner {
+  height: 300px;
   position: relative;
   background-color: #39FFBF;
   width: calc(1600px + ((100% - 1600px) / 2));
@@ -270,6 +295,10 @@ header {
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-right: 100px;
+}
+.main-darkblue-back .green_banner div p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
 }
 .main-darkblue-back .green_banner button {
   position: absolute;
@@ -348,7 +377,9 @@ header {
 }
 .main-darkblue-back .projects_container .projects .projects_title .arrows button:hover {
   background-color: #39FFBF;
-  transition: 0.4s;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .main-darkblue-back .projects_container .projects .projects_presentation {
   width: 100%;
@@ -401,13 +432,20 @@ header {
   font-size: 1.4rem;
   cursor: pointer;
 }
+.main-darkblue-back .projects_container .projects .projects_presentation .projects_img .overlay button:hover {
+  background-color: #39FFBF;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
 .main-darkblue-back .projects_container .projects .projects_presentation .projects_img:hover .overlay {
   opacity: 1;
 }
 .main-darkblue-back .testimonial {
   display: flex;
-  flex-direction: column;
+  justify-content: unset;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 150px;
 }
 .main-darkblue-back .testimonial .testimonial_title {
@@ -462,12 +500,13 @@ header {
   width: calc(1600px + ((100% - 1600px) / 2));
   align-self: flex-end;
   background-color: white;
+  height: 350px;
   display: flex;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section {
   width: calc(1600px / 3);
   position: relative;
-  padding: 70px 80px 60px;
+  padding: 50px 80px 80px;
   transition: background 0.3;
   background-position: center;
   background-size: cover;
@@ -475,6 +514,8 @@ header {
 .main-darkblue-back .testimonial .white_banner .banner_section p {
   margin-bottom: 30px;
   color: #888888;
+  font-family: "Montserrat", sans-serif;
+  line-height: 25px;
 }
 .main-darkblue-back .testimonial .white_banner .banner_section h6 {
   font-size: 1.3rem;
@@ -581,10 +622,9 @@ header {
 .main-darkblue-back .blog .blog_squares figure figcaption span {
   color: red;
   margin-bottom: 15px;
-}
-.main-darkblue-back .blog .blog_squares figure figcaption span {
   font-size: 1.1rem;
   color: red;
+  font-family: "Montserrat", sans-serif;
 }
 .main-darkblue-back .blog .blog_squares figure figcaption span:first-child {
   margin-right: 30px;
@@ -628,6 +668,7 @@ header {
   max-width: 450px;
   text-align: center;
   margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
 }
 .main-darkblue-back .get_started button {
   padding: 20px 50px;
@@ -641,6 +682,7 @@ header {
 }
 .main-darkblue-back .get_started button:hover {
   background-color: #39FFBF;
+  color: white;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -711,6 +753,8 @@ footer section:last-child {
 }
 footer section:last-child div {
   width: calc(100% / 2);
+  font-family: "Montserrat", sans-serif;
+  font: 0.7rem;
 }
 footer section:last-child .terms {
   display: flex;

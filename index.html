@@ -54,58 +54,61 @@
                     <button id="play-btn"><i class="fas fa-play"></i></button>
                 </div>
             </div>
-
         </div>
     </header>
     <!-- /header -->
 
     <!-- main -->
     <main>
+        <div class="background-square"></div>
         <!-- consulting -->
         <section class="consulting">
-            <div class="consulting_title">
-                <h3>our consultants can help you</h3>
+            <div>
+                <div class="consulting_title">
+                    <h3>our consultants can help you</h3>
+                </div>
+                <div class="div_80">
+                    <div class="statistical div_50">
+                        <div class="consulting_img">
+                            <img src="img/line-graph.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>statistical consulting</h4>
+                            <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
+                        </div>
+                    </div>
+                    <div class="digital div_50">
+                        <div class="consulting_img">
+                            <img src="img/shout.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>digital consulting</h4>
+                            <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="div_80">
+                    <div class="banking div_50">
+                        <div class="consulting_img">
+                            <img src="img/Path-13.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>banking consulting</h4>
+                            <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
+                        </div>
+                    </div>
+                    <div class="enterprise div_50">
+                        <div class="consulting_img">
+                            <img src="img/target.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>enterprise consulting</h4>
+                            <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="div_80">
-                <div class="statistical div_50">
-                    <div class="consulting_img">
-                        <img src="img/line-graph.svg" alt="">
-                    </div>
-                    <div class="description">
-                        <h4>statistical consulting</h4>
-                        <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                    </div>
-                </div>
-                <div class="digital div_50">
-                    <div class="consulting_img">
-                        <img src="img/shout.svg" alt="">
-                    </div>
-                    <div class="description">
-                        <h4>digital consulting</h4>
-                        <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                    </div>
-                </div>
-            </div>
-            <div class="div_80">
-                <div class="banking div_50">
-                    <div class="consulting_img">
-                        <img src="img/Path-13.svg" alt="">
-                    </div>
-                    <div class="description">
-                        <h4>banking consulting</h4>
-                        <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                    </div>
-                </div>
-                <div class="enterprise div_50">
-                    <div class="consulting_img">
-                        <img src="img/target.svg" alt="">
-                    </div>
-                    <div class="description">
-                        <h4>enterprise consulting</h4>
-                        <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
-                    </div>
-                </div>
-            </div>
+            
         </section>
 
         <section class="main-darkblue-back">
@@ -142,32 +145,12 @@
                     </div>
     
                     <div class="projects_presentation">
-                        <div class="projects_img">
-                            <img src="img/DRY-1-790x592.jpg" alt="">
+                        <div class="projects_img" v-for="(project, index) in projects">
+                            <img :src="project.img" alt="img">
                             <div class="overlay">
                                 <div>
-                                    <p>Purinky Products</p>
-                                    <span>uncategorized</span>
-                                </div>
-                                <button>+</button>
-                            </div>
-                        </div>
-                        <div class="projects_img">
-                            <img src="img/221bf0b7-8134-43bb-936a-5acbe42db64a-790x592.jpg" alt="">
-                            <div class="overlay">
-                                <div>
-                                    <p>Purinky Products</p>
-                                    <span>uncategorized</span>
-                                </div>
-                                <button>+</button>
-                            </div>
-                        </div>
-                        <div class="projects_img">
-                            <img src="img/z1el4c4p-790x592.jpg" alt="">
-                            <div class="overlay">
-                                <div>
-                                    <p>Purinky Products</p>
-                                    <span>uncategorized</span>
+                                    <p>{{project.title}}</p>
+                                    <span>{{project.span}}</span>
                                 </div>
                                 <button>+</button>
                             </div>
@@ -269,7 +252,7 @@
                 <span>Privacy Environmental Policy</span>
             </div>
             <div class="copyright_logo">
-                <span>Copyright &copy; 2021 Phlox Consulting. All Rights Reserved.</span> 
+                <span>Copyright &copy; <span>{{date}}</span> Phlox Consulting. All Rights Reserved.</span> 
             </div>
         </section>
     </footer>

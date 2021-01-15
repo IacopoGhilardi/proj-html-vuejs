@@ -30,6 +30,24 @@ const app = new Vue({
                 class: ''
             }
         ],
+        projects: [
+            {
+                img: "img/DRY-1-790x592.jpg",
+                title: "Purinky Products",
+                span: "uncategorized"
+            },
+            {
+                img: "img/221bf0b7-8134-43bb-936a-5acbe42db64a-790x592.jpg",
+                title: "Purinky Products",
+                span: "uncategorized"
+            },
+            {
+                img: "img/z1el4c4p-790x592.jpg",
+                title: "Purinky Products",
+                span: "uncategorized"
+            }
+        ],
+        date: new Date().getFullYear()
     },
     methods: {
         toggleActiveClass(index) {

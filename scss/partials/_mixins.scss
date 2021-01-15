@@ -9,9 +9,8 @@
     }
 }
 
-
-@mixin uppercase {
-    text-transform: uppercase;
+@mixin monserratFont {
+    font-family: 'Montserrat', sans-serif;
 }
 
 @mixin flexItem($justify, $align) {
@@ -55,4 +54,13 @@
     color: white;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+@mixin buttonHover($background ,$color) {
+    &:hover {
+        background-color: $background;
+        color: $color;
+        transition: .3s;
+        cursor: pointer;
+    }
 }

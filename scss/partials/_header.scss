@@ -38,7 +38,7 @@ header {
                 a {
                     color: #ffffffb0;
                     font-size: 14px;
-                    @include uppercase;
+                    text-transform: uppercase;
                     &:hover {
                         color: white;
                     }
@@ -66,10 +66,10 @@ header {
 #jumbotron {
     font-family: 'Bai Jamjuree', sans-serif;
     width: $generalWidth;
-    max-width: 1600px;
+    max-width: $maxWidth;
     height: 100%;
     color: white;
-    @include uppercase;
+    text-transform: uppercase;
     @include flexItem(flex-start, center);
     p {
         font-size: 17px;
@@ -90,14 +90,12 @@ header {
     .buttons {
         display: flex;
         .green-btn {
-            @include uppercase;
-            letter-spacing: 2px;
+            @include defaultBtn;
+            color: $primaryDarkBlue;
             background-color: $greenBackground;
-            padding: 25px 60px;
-            outline: none;
-            border: none;
-            font-size: 14px;
             margin-right: 40px;
+            position: relative;
+            @include buttonHover ($primaryRed, white);
         }
         #play-btn {
             align-self: flex-end;

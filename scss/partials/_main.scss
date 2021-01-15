@@ -1,19 +1,17 @@
-// main {
-//     padding-bottom: ;
-// }
 .consulting {
-    display: flex;
+    @include flexItem(center, center);
     flex-direction: column;
-    align-items: center;
     overflow: hidden;
     padding: 50px 0;
     .consulting_title {
         display: flex;
-        min-width: calc(544px*2);
+        min-width: calc(544px * 2);
         justify-content: flex-start;
+        margin: 60px 0;
+        padding-left: 200px;
         h3 {
             font-size: 1.7rem;
-            @include uppercase;
+            text-transform: uppercase;
             position: relative;
             color: $primaryDarkBlue;
             &::after {
@@ -25,12 +23,10 @@
                 width: 2000px;
             }
         }
-        margin: 60px 0;
     }
     .div_80 {
-        display: flex;
+        @include flexItem(center, unset);
         padding-left: 200px;
-        justify-content: center;
         .div_50 {
             display: flex;
             padding: 30px 30px 30px 0;
@@ -43,11 +39,11 @@
                 color: $primaryDarkBlue;
                 h4 {
                     font-size: 1.3rem;
-                    @include uppercase;
+                    text-transform: uppercase;
                     margin-bottom: 20px;
                 }
                 p {
-                    font-size: 1rem;
+                    @include monserratFont;
                 }
             }
             .description {
@@ -70,7 +66,16 @@
 
 .main-darkblue-back {
     background-color: $primaryDarkBlue;
-
+    position: relative;
+    .background-square {
+        width: 1000px;
+        height: 500px;
+        background-color: pink;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
     .about {
         color: white;
         background-image: url("../img/business-people-working-together-on-project-and-5FHSKBL.jpg");
@@ -87,15 +92,18 @@
             }
             h2 {
                 font-size: 3.7rem;
-                @include uppercase;
+                text-transform: uppercase;
                 margin-bottom: 30px
             }
             p {
                 color: #AAAAAA;
+                @include monserratFont;
+                line-height: 25px;
             }
         }
     }
     .green_banner {
+        height: 300px;
         position: relative;
         background-color: $greenBackground;
         width: calc(#{$maxWidth} + ((100% - #{$maxWidth}) / 2));
@@ -110,8 +118,12 @@
             color: $primaryDarkBlue;
             h3 {
                 font-size: 1.5rem;
-                @include uppercase;
+                text-transform: uppercase;
                 margin-right: 100px;
+            }
+            p {
+                @include monserratFont;
+                font-size: .9rem;
             }
         }
         button {
@@ -142,7 +154,7 @@
             .projects_title {
                 margin-bottom: 50px;
                 max-width: 900px;
-                @include uppercase;
+                text-transform: uppercase;
                 color: white;
                 h6 {
                     @include sectionTitle;
@@ -164,10 +176,7 @@
                             color: white;
                             font-size: .8rem;
                         }
-                        &:hover {
-                            background-color: $greenBackground;
-                            transition: .4s;
-                        }
+                        @include buttonHover($greenBackground, white);
                     }
                 }
             }
@@ -186,9 +195,7 @@
                         max-height: 100%;
                     }
                     .overlay {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: flex-end;
+                        @include flexItem(space-between, flex-end);
                         position: absolute;
                         top: 10px;
                         left: 10px;
@@ -218,6 +225,7 @@
                             color: white;
                             font-size: 1.4rem;
                             cursor: pointer;
+                            @include buttonHover($greenBackground, white);
                         }
                     }
                     &:hover .overlay {
@@ -229,9 +237,8 @@
     }
 
     .testimonial {
-        display: flex;
+        @include flexItem(unset, center);
         flex-direction: column;
-        align-items: center;
         margin-bottom: 150px;
         .testimonial_title {
             width: $generalWidth;
@@ -265,17 +272,20 @@
             width: calc(#{$maxWidth} + ((100% - #{$maxWidth}) / 2));
             align-self: flex-end;
             background-color: white;
+            height: 350px;
             display: flex;
             .banner_section {
                 width: calc(#{$maxWidth} / 3);
                 position: relative;
-                padding: 70px 80px 60px;
+                padding: 50px 80px 80px;
                 transition: background .3;
                 background-position: center;
                 background-size: cover;
                 p {
                     margin-bottom: 30px;
                     color: $grayText;
+                    @include monserratFont;
+                    line-height: 25px;
                 }
                 h6 {
                     font-size: 1.3rem;
@@ -361,10 +371,9 @@
                     span {
                         color: red;
                         margin-bottom: 15px;
-                    }
-                    span {
                         font-size: 1.1rem;
                         color: red;
+                        @include monserratFont;
                         &:first-child {
                             margin-right: 30px;
                         }
@@ -411,6 +420,7 @@
             max-width: 450px;
             text-align: center;
             margin-bottom: 30px;
+            @include monserratFont;
         }
         button {
             padding: 20px 50px;
@@ -418,14 +428,10 @@
             border: none;
             font-size: .7rem;
             letter-spacing: 2px;
-            @include uppercase; 
+            text-transform: uppercase; 
             background-color: $primaryDarkBlue;
             color: white;
-            &:hover {
-                background-color: $greenBackground;
-                transition: .3s;
-                cursor: pointer;
-            }
+            @include buttonHover($greenBackground, white);
         }
     }
     
