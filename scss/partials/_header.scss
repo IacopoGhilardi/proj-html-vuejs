@@ -64,19 +64,15 @@ header {
 
 //jumbotron
 #jumbotron {
-    font-family: 'Bai Jamjuree', sans-serif;
     width: $generalWidth;
     max-width: $maxWidth;
     height: 100%;
     color: white;
-    text-transform: uppercase;
     @include flexItem(flex-start, center);
     p {
+        @include sectionTitle;
         font-size: 17px;
         letter-spacing: 3px;
-        &::before {
-            @include greenLine;
-        }
     }
     #title {
         max-width: 520px;

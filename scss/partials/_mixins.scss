@@ -64,3 +64,12 @@
         cursor: pointer;
     }
 }
+
+@mixin backgroundSquare {
+    background-color: #272642;
+    width: 800px;
+    height: 700px;
+    position: absolute;
+    border-radius: 90px;
+    transform: rotate(-45deg);
+}

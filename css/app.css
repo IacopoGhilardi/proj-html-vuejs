@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Bai Jamjuree", "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
+
 header {
   height: 1000px;
   display: flex;
@@ -75,17 +90,21 @@ header {
 }
 
 #jumbotron {
-  font-family: "Bai Jamjuree", sans-serif;
   width: 80%;
   max-width: 1600px;
   height: 100%;
   color: white;
-  text-transform: uppercase;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 #jumbotron p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: white;
   font-size: 17px;
   letter-spacing: 3px;
 }
@@ -155,6 +174,7 @@ header {
   flex-direction: column;
   overflow: hidden;
   padding: 50px 0;
+  z-index: 3;
 }
 .consulting .consulting_title {
   display: flex;
@@ -165,7 +185,6 @@ header {
 }
 .consulting .consulting_title h3 {
   font-size: 1.7rem;
-  text-transform: uppercase;
   position: relative;
   color: #1F1E38;
 }
@@ -202,11 +221,11 @@ header {
 }
 .consulting .div_80 .div_50 div h4 {
   font-size: 1.3rem;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 .consulting .div_80 .div_50 div p {
   font-family: "Montserrat", sans-serif;
+  color: #888888;
 }
 .consulting .div_80 .div_50 .description {
   max-width: 400px;
@@ -225,16 +244,50 @@ header {
 
 .main-darkblue-back {
   background-color: #1F1E38;
+  overflow: hidden;
   position: relative;
 }
-.main-darkblue-back .background-square {
-  width: 1000px;
-  height: 500px;
-  background-color: pink;
+.main-darkblue-back .background-square1 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: -100px;
+  right: -100px;
+}
+.main-darkblue-back .background-square2 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: 400px;
+  right: -100px;
+}
+.main-darkblue-back .background-square3 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: 2400px;
+  left: -120px;
+  width: 1000px;
+}
+.main-darkblue-back .background-square4 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: 3400px;
+  left: -1250px;
+  width: 2000px;
 }
 .main-darkblue-back .about {
   color: white;
@@ -243,13 +296,37 @@ header {
   background-position: top left;
   background-size: 56% auto;
   padding: 60px 0;
+  overflow: hidden;
 }
 .main-darkblue-back .about .about_description {
   margin-left: 56%;
   padding: 200px 100px;
   width: 700px;
+  z-index: 1;
+  position: relative;
+}
+.main-darkblue-back .about .about_description .background-square1 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: -300px;
+  right: -400px;
+}
+.main-darkblue-back .about .about_description .background-square2 {
+  background-color: #272642;
+  width: 800px;
+  height: 700px;
+  position: absolute;
+  border-radius: 90px;
+  transform: rotate(-45deg);
+  top: -100px;
+  right: -400px;
 }
 .main-darkblue-back .about .about_description h6 {
+  position: relative;
   font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 400;
@@ -266,11 +343,12 @@ header {
   margin-right: 20px;
 }
 .main-darkblue-back .about .about_description h2 {
+  position: relative;
   font-size: 3.7rem;
-  text-transform: uppercase;
   margin-bottom: 30px;
 }
 .main-darkblue-back .about .about_description p {
+  position: relative;
   color: #AAAAAA;
   font-family: "Montserrat", sans-serif;
   line-height: 25px;
@@ -293,7 +371,6 @@ header {
 }
 .main-darkblue-back .green_banner div h3 {
   font-size: 1.5rem;
-  text-transform: uppercase;
   margin-right: 100px;
 }
 .main-darkblue-back .green_banner div p {
@@ -328,14 +405,12 @@ header {
 }
 .main-darkblue-back .projects_container .projects {
   flex-direction: column;
-  width: 80%;
-  max-width: 1600px;
+  width: 1600px;
   position: relative;
 }
 .main-darkblue-back .projects_container .projects .projects_title {
   margin-bottom: 50px;
   max-width: 900px;
-  text-transform: uppercase;
   color: white;
 }
 .main-darkblue-back .projects_container .projects .projects_title h6 {
@@ -497,6 +572,7 @@ header {
   text-align: end;
 }
 .main-darkblue-back .testimonial .white_banner {
+  position: relative;
   width: calc(1600px + ((100% - 1600px) / 2));
   align-self: flex-end;
   background-color: white;
@@ -646,6 +722,7 @@ header {
   transition: 0.4s ease-out;
 }
 .main-darkblue-back .get_started {
+  position: relative;
   margin-top: 300px;
   width: 100%;
   padding: 140px 0;
@@ -804,15 +881,4 @@ footer section:last-child .copyright_logo {
 }
 .chat div:nth-child(2):hover {
   cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: "Bai Jamjuree", "Raleway", sans-serif;
-  font-size: 16px;
 }

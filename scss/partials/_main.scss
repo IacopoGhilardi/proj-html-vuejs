@@ -1,8 +1,10 @@
+// .consulting
 .consulting {
     @include flexItem(center, center);
     flex-direction: column;
     overflow: hidden;
     padding: 50px 0;
+    z-index: 3;
     .consulting_title {
         display: flex;
         min-width: calc(544px * 2);
@@ -11,7 +13,6 @@
         padding-left: 200px;
         h3 {
             font-size: 1.7rem;
-            text-transform: uppercase;
             position: relative;
             color: $primaryDarkBlue;
             &::after {
@@ -39,11 +40,11 @@
                 color: $primaryDarkBlue;
                 h4 {
                     font-size: 1.3rem;
-                    text-transform: uppercase;
                     margin-bottom: 20px;
                 }
                 p {
                     @include monserratFont;
+                    color: $grayText;
                 }
             }
             .description {
@@ -66,16 +67,31 @@
 
 .main-darkblue-back {
     background-color: $primaryDarkBlue;
+    overflow: hidden;
     position: relative;
-    .background-square {
-        width: 1000px;
-        height: 500px;
-        background-color: pink;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
+    .background-square1 {
+        @include backgroundSquare;
+        top: -100px;
+        right: -100px;
     }
+    .background-square2 {
+        @include backgroundSquare;
+        top: 400px;
+        right: -100px;
+    }
+    .background-square3 {
+        @include backgroundSquare;
+        top: 2400px;
+        left: -120px;
+        width: 1000px;
+    }
+    .background-square4 {
+        @include backgroundSquare;
+        top: 3400px;
+        left: -1250px;
+        width: 2000px;
+    }
+    // about
     .about {
         color: white;
         background-image: url("../img/business-people-working-together-on-project-and-5FHSKBL.jpg");
@@ -83,25 +99,41 @@
         background-position: top left;
         background-size: 56% auto;
         padding: 60px 0;
+        overflow: hidden;
         .about_description {
             margin-left: 56%;
             padding: 200px 100px;
             width: 700px;
+            z-index: 1;
+            position: relative;
+            .background-square1 {
+                @include backgroundSquare;
+                top: -300px;
+                right: -400px;
+            }
+            .background-square2 {
+                @include backgroundSquare;
+                top: -100px;
+                right: -400px;
+            }
             h6 {
+                position: relative;
                 @include sectionTitle;
             }
             h2 {
+                position: relative;
                 font-size: 3.7rem;
-                text-transform: uppercase;
                 margin-bottom: 30px
             }
             p {
+                position: relative;
                 color: #AAAAAA;
                 @include monserratFont;
                 line-height: 25px;
             }
         }
     }
+    // green banner
     .green_banner {
         height: 300px;
         position: relative;
@@ -118,7 +150,6 @@
             color: $primaryDarkBlue;
             h3 {
                 font-size: 1.5rem;
-                text-transform: uppercase;
                 margin-right: 100px;
             }
             p {
@@ -141,6 +172,7 @@
         
     }
 
+    // .projects
     .projects_container {
         width: 100%;
         margin-top: 150px;
@@ -148,13 +180,11 @@
         @include flexItem(center, unset);
         .projects {
             flex-direction: column;
-            width: $generalWidth;
-            max-width: #{$maxWidth};
+            width: $maxWidth;
             position: relative;
             .projects_title {
                 margin-bottom: 50px;
                 max-width: 900px;
-                text-transform: uppercase;
                 color: white;
                 h6 {
                     @include sectionTitle;
@@ -235,7 +265,7 @@
             }
         }
     }
-
+    // .testimonial
     .testimonial {
         @include flexItem(unset, center);
         flex-direction: column;
@@ -268,7 +298,10 @@
                 text-align: end;
             }
         }
+
+        // white banner 
         .white_banner {
+            position: relative;
             width: calc(#{$maxWidth} + ((100% - #{$maxWidth}) / 2));
             align-self: flex-end;
             background-color: white;
@@ -316,6 +349,7 @@
         }
     }
 
+    // blog 
     .blog {
         position: relative;
         display: flex;
@@ -400,7 +434,9 @@
         
     }
 
+    // get started 
     .get_started {
+        position: relative;
         margin-top: 300px;
         width: 100%;
         padding: 140px 0;
